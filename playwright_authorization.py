@@ -5,15 +5,18 @@ with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
 
-    page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
+    page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
 
-    email_input = page.get_by_test_id('login-form-email-input').locator('input')
+    email_input = page.get_by_test_id('registration-form-email-input').locator('input')
     email_input.fill('user.name@gmail.com')
-    password_input = page.get_by_test_id('login-form-password-input').locator('input')
+    user_name_input = page.get_by_test_id('registration-form-username-input').locator('input')
+    user_name_input.fill('username')
+    password_input = page.get_by_test_id('registration-form-password-input').locator('input')
     password_input.fill('Password')
-    login_button = page.get_by_test_id('login-page-login-button')
-    login_button.click()
-    Wrong_email_or_password_alert = page.locator('//div[@data-testid="login-page-wrong-email-or-password-alert"]')
+    registration_button = page.get_by_test_id('registration-page-registration-button')
+    registration_button.click()
 
-    expect(Wrong_email_or_password_alert).to_be_visible()
-    page.wait_for_timeout(5000)
+    header_dashboard = page.get_by_test_id('dashboard-toolbar-title-text')
+
+    expect(header_dashboard).to_be_visible()
+    expect(header_dashboard).to_have_text('Dashboard')
