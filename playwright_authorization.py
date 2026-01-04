@@ -1,4 +1,3 @@
-import playwright
 from playwright.sync_api import sync_playwright, expect
 
 with sync_playwright() as playwright:
@@ -14,6 +13,7 @@ with sync_playwright() as playwright:
     password_input = page.get_by_test_id('registration-form-password-input').locator('input')
     password_input.fill('Password')
     registration_button = page.get_by_test_id('registration-page-registration-button')
+    page.wait_for_timeout(5000)
     registration_button.click()
 
     header_dashboard = page.get_by_test_id('dashboard-toolbar-title-text')
