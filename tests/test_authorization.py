@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, expect, Page
+from playwright.sync_api import expect, Page
 
 def test_wrong_email_or_password_authorization(chromium_page: Page):
         chromium_page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
