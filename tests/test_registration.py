@@ -8,4 +8,4 @@ def test_successfull_registration(registration_page: RegistrationPage, dashboard
         registration_page.fill_registration_form()
         registration_page.click_registration_button()
 
-        dashboard_page.check_dashboard_title_to_be_visible()
+        dashboard_page.check_visible_dashboard_title()
