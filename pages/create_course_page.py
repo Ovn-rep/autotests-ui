@@ -164,7 +164,7 @@ class CreateCoursePage(BasePage):
 
     def click_delete_exercise_button(self, index: int):
         delete_exercise_button = self.page.get_by_test_id(
-            f"create-course-exercise-{index}-box-toolbar-delete-exercise-button"
+            f"create-course-exercise-car-delete-exercise-button"
         )
         delete_exercise_button.click()
 
