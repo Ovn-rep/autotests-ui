@@ -1,5 +1,5 @@
 from Components.base_component import BaseComponent
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 import re
 
 from Components.navigation.sidebar_list_item_component import SideBarListItemComponent

@@ -1,5 +1,4 @@
 import pytest
-from playwright.sync_api import Page, expect
 from pages.courses_list_page import CoursesListPage
 from pages.create_course_page import CreateCoursePage
 
@@ -8,33 +7,30 @@ def test_create_course(create_course_page: CreateCoursePage, course_list_page: C
 
         create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
-        create_course_page.check_visible_create_course_title()
-        create_course_page.check_disabled_create_course_button()
-        create_course_page.check_visible_preview_empty_view()
-        create_course_page.chek_visible_create_course_form(
-                title= "",estimated_time="",
-                description="", max_score="0",
-                min_score="0"
+        create_course_page.create_courses_toolbar.check_visible(is_create_course_disabled = True)
+        create_course_page.image_upload_widget.check_visible(uploaded_file=False)
+        create_course_page.create_course_form.check_visible(
+            title= "", estimated_time="", description="",
+            max_score="0", min_score="0"
         )
-        create_course_page.check_visible_create_exercises_title()
-        create_course_page.check_visible_create_exercises_button()
+
+        create_course_page.create_exercises_toolbar.check_visible()
         create_course_page.check_visible_create_exercises_empty_view()
 
-        create_course_page.upload_preview_file('./testdata/files/image.png')
-        create_course_page.check_visible_with_uploaded_image(uploaded_image=True)
-        create_course_page.fill_create_course_form(
-                title="Playwright", estimated_time="2 weeks",
-        description="Playwright", max_score="100",
-               min_score="10"
+        create_course_page.image_upload_widget.upload_file('./testdata/files/image.png')
+        create_course_page.image_upload_widget.check_visible(uploaded_file=True)
+        create_course_page.create_course_form.fill(
+            title="Playwright", estimated_time="2 weeks", description="Playwright",
+            max_score="100", min_score="10"
         )
-        create_course_page.click_create_course_button()
 
-        course_list_page.check_visible_course_title()
-        course_list_page.chek_visible_create_course_button()
-        course_list_page.check_visible_course_card(
-                index=0, text="Playwright",
-                max_score_text="100", min_score_text="10",
-                estimated_time_text="2 weeks"
+        create_course_page.create_courses_toolbar.click_create_course_button()
+
+        course_list_page.toolbar.check_visible()
+        course_list_page.course_card.check_visible(
+            index=0, title="Playwright",
+            max_score="100", min_score="10",
+            estimated_time="2 weeks"
         )
 
 @pytest.mark.courses
@@ -45,8 +41,7 @@ def test_empty_courses_list(course_list_page: CoursesListPage):
     course_list_page.navbar.check_visible("username")
     course_list_page.sidebar.check_visible()
 
-    course_list_page.check_visible_course_title()
-    course_list_page.chek_visible_create_course_button()
+    course_list_page.toolbar.check_visible()
     course_list_page.check_visible_empty_course()
 
 
