@@ -1,49 +1,46 @@
 from Components.base_component import BaseComponent
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
+from elements.button import Button
+from elements.input import Input
+from elements.text import Text
+
 
 class CourseCreateExercisesComponent(BaseComponent):
-    def click_delete_button(self):
-        delete_button = self.page.get_by_test_id(
-            f"create-course-exercise-car-delete-exercise-button"
+    def __init__(self, page: Page):
+        super().__init__(page)
+
+        self.delete_button = Button(
+            page, "create-course-exercise-{index}-box-toolbar-delete-exercise-button", "Delete exercise"
         )
-        delete_button.click()
+        self.subtitle = Text(
+            page, "create-course-exercise-{index}-box-toolbar-subtitle-text", "Exercise subtitle"
+        )
+        self.title_input = Input(
+            page, "create-course-exercise-form-title-{index}-input", "Title"
+        )
+        self.description_input = Input(
+            page, "create-course-exercise-form-description-{index}-input", "Description"
+        )
+
+    def click_delete_button(self, index: int):
+        self.delete_button.click(index=index)
 
     def check_visible(self, index: int, title: str, description: str):
-        subtitle = self.page.get_by_test_id(
-            f"create-course-exercise-{index}-box-toolbar-subtitle-text"
-        )
+        self.subtitle.check_visible(index=index)
+        self.subtitle.check_have_text(f"#{index + 1} Exercise", index=index)
 
-        title_input = self.page.get_by_test_id(
-            f"create-course-exercise-form-title-{index}-input"
-        ).locator("input")
+        self.title_input.check_visible(index=index)
+        self.title_input.check_have_value(title, index=index)
 
-        description_input = self.page.get_by_test_id(
-            f"create-course-exercise-form-description-{index}-input"
-        ).locator("input")
-
-        expect(subtitle).to_be_visible()
-        expect(subtitle).to_have_value(f"#{index + 1} Exercise")
-
-        expect(title_input).to_be_visible()
-        expect(title_input).to_have_value(title)
-
-        expect(description_input).to_be_visible()
-        expect(description_input).to_have_value(description)
+        self.description_input.check_visible(index=index)
+        self.description_input.check_have_value(description, index=index)
 
     def fill_exercise_form(self, index: int, title: str, description: str):
-        exercise_input_title = self.page.get_by_test_id(
-            f"create-course-exercise-form-title-{index}-input"
-        ).locator("input")
+        self.title_input.fill(title, index=index)
+        self.title_input.check_have_value(title, index=index)
 
-        exercise_input_description = self.page.get_by_test_id(
-            f"create-course-exercise-form-description-{index}-input"
-        ).locator("input")
-
-        exercise_input_title.fill(title)
-        expect(exercise_input_title).to_have_value(title)
-
-        exercise_input_description.fill(description)
-        expect(exercise_input_description).to_have_value(description)
+        self.description_input.fill(description, index=index)
+        self.description_input.check_have_value(description, index=index)
 
 
 
