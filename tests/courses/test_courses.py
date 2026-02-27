@@ -1,11 +1,23 @@
 import pytest
+import allure
+from allure_commons.types import Severity
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.allure.tags import AllureTag
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
 
 
 @pytest.mark.courses
 @pytest.mark.regression
+@allure.tag(AllureTag.REGRESSION, AllureTag.COURSES)
+@allure.epic(AllureEpic.ADMINISTRATION)
+@allure.feature(AllureFeature.COURSES)
+@allure.story(AllureStory.COURSES)
 class TestCourses:
+    @allure.title('Check create course')
+    @allure.severity(Severity.CRITICAL)
     def test_create_course(self, create_course_page: CreateCoursePage, course_list_page: CoursesListPage):
         create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
@@ -35,6 +47,8 @@ class TestCourses:
             estimated_time="2 weeks"
         )
 
+    @allure.title('Check displaying of empty courses list')
+    @allure.severity(Severity.NORMAL)
     def test_empty_courses_list(self, course_list_page: CoursesListPage):
         course_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
 
@@ -44,6 +58,8 @@ class TestCourses:
         course_list_page.toolbar.check_visible()
         course_list_page.check_visible_empty_course()
 
+    @allure.title('Check edit course')
+    @allure.severity(Severity.CRITICAL)
     def test_edit_course(self, create_course_page: CreateCoursePage, course_list_page: CoursesListPage):
         create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
