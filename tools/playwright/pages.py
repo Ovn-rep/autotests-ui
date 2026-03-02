@@ -1,17 +1,22 @@
 import allure
+from config import settings
 from playwright.sync_api import Playwright, Page
 
 
 def initialize_page(playwright: Playwright, test_name: str, storage_state: str|None=None) -> Page:
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context(storage_state=storage_state, record_video_dir='./videos')
+    browser = playwright.chromium.launch(headless=settings.headless)
+    context = browser.new_context(
+        base_url=settings.get_base_url(),
+        storage_state=storage_state,
+        record_video_dir=settings.videos_dir
+    )
     context.tracing.start(snapshots=True, screenshots=True, sources=True)
     page = context.new_page()
 
     yield page
 
-    context.tracing.stop(path=f"./tracing/{test_name}.zip")
+    context.tracing.stop(path=settings.tracing_dir.joinpath(f"{test_name}.zip"))
     browser.close()
 
-    allure.attach.file(source=f'./tracing/{test_name}.zip', extension='zip', name="trace")
+    allure.attach.file(source=settings.tracing_dir.joinpath(f'{test_name}.zip'), extension='zip', name="trace")
     allure.attach.file(page.video.path(), name="video", attachment_type=allure.attachment_type.WEBM)
