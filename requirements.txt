@@ -6,6 +6,7 @@ certifi==2026.1.4
 charset-normalizer==3.4.4
 dnspython==2.8.0
 email-validator==2.3.0
+execnet==2.1.2
 greenlet==3.3.0
 idna==3.11
 iniconfig==2.3.0
@@ -21,6 +22,7 @@ pytest==9.0.2
 pytest-base-url==2.1.0
 pytest-playwright==0.7.2
 pytest-rerunfailures==16.1
+pytest-xdist==3.8.0
 python-dotenv==1.2.1
 python-slugify==8.0.4
 requests==2.32.5

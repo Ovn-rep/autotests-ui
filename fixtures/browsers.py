@@ -1,4 +1,6 @@
 import pytest
+from pytest_playwright.pytest_playwright import browser
+
 from config import settings
 from playwright.sync_api import Page, Playwright
 from pages.authentication.registration_page import RegistrationPage
@@ -7,9 +9,13 @@ from tools.playwright.pages import initialize_page
 from tools.routes import AppRoute
 
 
-@pytest.fixture
-def chromium_page(request: SubRequest,playwright: Playwright) -> Page:
-        yield from initialize_page(playwright=playwright, test_name=request.node.name)
+@pytest.fixture(params=settings.browsers)
+def page(request: SubRequest,playwright: Playwright) -> Page:
+        yield from initialize_page(
+                playwright=playwright,
+                test_name=request.node.name,
+                browser_type=request.param
+        )
 
 @pytest.fixture(scope='session')
 def initialize_browser_state(playwright: Playwright):
@@ -30,11 +36,12 @@ def initialize_browser_state(playwright: Playwright):
 
         browser.close()
 
-@pytest.fixture
-def chromium_page_with_state(request: SubRequest, initialize_browser_state, playwright: Playwright) -> Page:
+@pytest.fixture(params=settings.browsers)
+def page_with_state(request: SubRequest, initialize_browser_state, playwright: Playwright) -> Page:
         yield from initialize_page(
                 playwright=playwright, test_name=request.node.name,
-                storage_state=settings.browser_state_file
+                storage_state=settings.browser_state_file,
+                browser_type = request.param
         )
 
 
