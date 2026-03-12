@@ -1,5 +1,9 @@
 from playwright.sync_api import Page, expect, Locator
 import allure
+from tools.playwright.logger import get_logger
+
+
+logger = get_logger("BASE_ELEMENT")
 
 class BaseElement:
     def __init__(self, page: Page, locator: str, name: str):
@@ -13,20 +17,28 @@ class BaseElement:
 
     def get_by_locator(self, nth: int = 0, **kwargs) -> Locator:
         locator = self.locator.format(**kwargs)
-        with allure.step(f"Getting element with 'data-testid={locator}' at index = '{nth}'"):
+        step = f"Getting element with 'data-testid={locator}' at index = '{nth}'"
+        with allure.step(step):
+            logger.info(step)
             return self.page.get_by_test_id(locator).nth(nth)
 
     def click(self, nth: int = 0, **kwargs):
-        with allure.step(f"Clicking {self.type_of} '{self.name}'"):
+        step = f"Clicking {self.type_of} '{self.name}'"
+        with allure.step(step):
             locator = self.get_by_locator(nth, **kwargs)
+            logger.info(step)
             locator.click()
 
     def check_visible(self, nth: int = 0, **kwargs):
-        with allure.step(f"Checking that {self.type_of} '{self.name}' is visible"):
+        step = f"Checking that {self.type_of} '{self.name}' is visible"
+        with allure.step(step):
             locator = self.get_by_locator(nth, **kwargs)
+            logger.info(step)
             expect(locator).to_be_visible()
 
     def check_have_text(self, text: str, nth: int = 0, **kwargs):
-        with allure.step(f"Checking that {self.type_of} '{self.name} has text '{text}'"):
+        step = f"Checking that {self.type_of} '{self.name} has text '{text}'"
+        with allure.step(step):
             locator = self.get_by_locator(nth, **kwargs)
+            logger.info(step)
             expect(locator).to_have_text(text)

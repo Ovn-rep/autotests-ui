@@ -1,6 +1,7 @@
 import allure
 from config import settings, Browsers
 from playwright.sync_api import Playwright, Page
+from tools.playwright.mocks import abort_static_mock
 
 
 def initialize_page(
@@ -18,6 +19,7 @@ def initialize_page(
     )
     context.tracing.start(snapshots=True, screenshots=True, sources=True)
     page = context.new_page()
+    abort_static_mock(page)
 
     yield page
 

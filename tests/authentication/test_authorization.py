@@ -54,6 +54,7 @@ class TestAuthorization:
                         ('  ', 'password')
                 ]
         )
+        @pytest.mark.xdist_group(name="authorization-group")
         @allure.title('Check login with wrong email or password')
         @allure.severity(Severity.CRITICAL)
         def test_wrong_email_or_password_authorization(self, login_page: LoginPage, email: str, password: str):

@@ -17,6 +17,7 @@ from tools.routes import AppRoute
 @allure.epic(AllureEpic.LMS)
 @allure.feature(AllureFeature.AUTHENTICATION)
 @allure.story(AllureStory.REGISTRATION)
+@pytest.mark.xdist_group(name="authorization-group")
 class TestRegistration:
         @allure.title('Check registration with correct email, username and password')
         @allure.severity(Severity.CRITICAL)
