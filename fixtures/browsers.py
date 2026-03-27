@@ -1,6 +1,4 @@
 import pytest
-from pytest_playwright.pytest_playwright import browser
-
 from config import settings
 from playwright.sync_api import Page, Playwright
 from pages.authentication.registration_page import RegistrationPage
