@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -31,6 +31,19 @@ jobs:
         run: |
           pytest -m regression --alluredir=allure-results --numprocesses 2
 
+      - name: Upload allure-results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
+
+  publish-report:
+    if: always()
+    needs: [ run-tests ]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Get Allure history
         uses: actions/checkout@v4
         if: always()
@@ -39,13 +52,19 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Download allure-results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
 
       - name: Generates Allure Report with history
         uses: simple-elf/allure-report-action@v1.13
         if: always()
         with:
-         allure_results: allure-results
-         allure_history: allure-history
+          allure_results: allure-results
+          allure_history: allure-history
 
 
       - name: Deploy report to Github Pages
@@ -55,5 +74,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-
-
