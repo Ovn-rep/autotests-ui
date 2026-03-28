@@ -1,0 +1,98 @@
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-email-input' at index = '0'
+INFO     INPUT:input.py:21 Fill input 'Email' to value 'lm@al.ru'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-email-input' at index = '0'
+INFO     INPUT:input.py:28 Checking that input 'Email' has a value 'lm@al.ru'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-username-input' at index = '0'
+INFO     INPUT:input.py:21 Fill input 'Username' to value 'Alexk'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-username-input' at index = '0'
+INFO     INPUT:input.py:28 Checking that input 'Username' has a value 'Alexk'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-password-input' at index = '0'
+INFO     INPUT:input.py:21 Fill input 'Password' to value 'Alexk127'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-form-password-input' at index = '0'
+INFO     INPUT:input.py:28 Checking that input 'Password' has a value 'Alexk127'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=registration-page-registration-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:29 Clicking button 'Registration'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'App title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'App title has text 'UI Course'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Welcome title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Welcome title has text 'Welcome, Alexk!'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Logout'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Courses'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:29 Clicking button 'Button'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=login-form-email-input' at index = '0'
+INFO     INPUT:input.py:21 Fill input 'Email' to value 'lm@al.ru'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=login-form-email-input' at index = '0'
+INFO     INPUT:input.py:28 Checking that input 'Email' has a value 'lm@al.ru'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=login-form-password-input' at index = '0'
+INFO     INPUT:input.py:21 Fill input 'Password' to value 'Alexk127'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=login-form-password-input' at index = '0'
+INFO     INPUT:input.py:28 Checking that input 'Password' has a value 'Alexk127'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=login-page-login-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:29 Clicking button 'Login'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'App title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'App title has text 'UI Course'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Welcome title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Welcome title has text 'Welcome, Alexk!'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Logout'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=logout-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Courses'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=courses-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:43 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:22 Getting element with 'data-testid=dashboard-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:36 Checking that button 'Button' is visible
