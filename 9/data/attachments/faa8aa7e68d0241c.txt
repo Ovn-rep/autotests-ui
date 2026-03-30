@@ -1,0 +1,60 @@
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-toolbar-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=logout-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=logout-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Logout'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=logout-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Courses'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-drawer-list-item-icon' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that icon 'Icon' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-drawer-list-item-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Dashboard'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=dashboard-drawer-list-item-button' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that button 'Button' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'App title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=navigation-navbar-app-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'App title has text 'UI Course'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Welcome title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=navigation-navbar-welcome-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Welcome title has text 'Welcome, Alexk!'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=students-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=students-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Students'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=students-bar-chart' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that image 'Chart' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=activities-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=activities-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Activities'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=activities-line-chart' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that image 'Chart' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Courses'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=courses-pie-chart' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that image 'Chart' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=scores-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that text 'Title' is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=scores-widget-title-text' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:59 Checking that text 'Title has text 'Scores'
+INFO     BASE_ELEMENT:base_element.py:24 Getting element with 'data-testid=scores-scatter-chart' at index = '0'
+INFO     BASE_ELEMENT:base_element.py:50 Checking that image 'Chart' is visible
